@@ -1,0 +1,360 @@
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE DATABASE "cafes_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "cafes_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-10-04 17:14:42 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (3.7ms)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (36.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (27.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8423880227162024625)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCaves (20181004211635)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (26.6ms)[0m  [1m[35mCREATE TABLE "caves" ("id" bigserial primary key, "name" character varying, "description" character varying, "address" character varying)[0m
+  ↳ db/migrate/20181004211635_create_caves.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181004211635"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-10-04 21:25:13.764912"], ["updated_at", "2018-10-04 21:25:13.764912"]]
+  ↳ bin/rails:9
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8423880227162024625)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (7896.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cafes_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "cafes_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "cafes_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8423880227162024625)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8423880227162024625)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (183.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cafes_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (199.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cafes_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (558.3ms)[0m  [1m[35mCREATE DATABASE "cafes_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (434.3ms)[0m  [1m[35mCREATE DATABASE "cafes_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8423880227162024625)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCaves (20181004211635)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "caves" ("id" bigserial primary key, "name" character varying, "description" character varying, "address" character varying)[0m
+  ↳ db/migrate/20181004211635_create_caves.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181004211635"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-10-04 21:26:16.499621"], ["updated_at", "2018-10-04 21:26:16.499621"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8423880227162024625)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (212.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cafes_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (183.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cafes_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (557.1ms)[0m  [1m[35mCREATE DATABASE "cafes_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (462.4ms)[0m  [1m[35mCREATE DATABASE "cafes_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8423880227162024625)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCaves (20181004211635)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (16.8ms)[0m  [1m[35mCREATE TABLE "caves" ("id" bigserial primary key, "name" character varying, "description" character varying, "address" character varying)[0m
+  ↳ db/migrate/20181004211635_create_caves.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181004211635"]]
+  ↳ bin/rails:9
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-10-04 21:37:05.234805"], ["updated_at", "2018-10-04 21:37:05.234805"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8423880227162024625)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCafe Create (0.6ms)[0m  [1m[32mINSERT INTO "caves" ("name", "description", "address") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cafe Luxembourg"], ["description", "French comfort food and a Parisian vibe have been drawing A-list types here since 1983."], ["address", "200 W 70th St, New York, NY 10023"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCafe Create (0.3ms)[0m  [1m[32mINSERT INTO "caves" ("name", "description", "address") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Dweeb"], ["description", "Cheerful outpost featuring espresso drinks, tea and cafe fare in a bright, minimalist space."], ["address", "1434 Dekalb Ave, Brooklyn, NY 11237"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mCafe Create (0.3ms)[0m  [1m[32mINSERT INTO "caves" ("name", "description", "address") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Bwè Kafe"], ["description", "Relaxed, ethical-trade coffee shop that donates a portion of its proceeds to Haiti relief efforts."], ["address", "140 River Dr S, Jersey City, NJ 07310"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[36mCafe Load (0.3ms)[0m  [1m[34mSELECT  "caves".* FROM "caves" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/cafes" for 127.0.0.1 at 2018-10-04 17:55:39 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by CafesController#index as HTML
+  [1m[36mCafe Load (0.3ms)[0m  [1m[34mSELECT  "caves".* FROM "caves" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cafes_controller.rb:5
+Completed 204 No Content in 17ms (ActiveRecord: 4.8ms)
+
+
+Started POST "/cafes" for 127.0.0.1 at 2018-10-04 17:56:06 -0400
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for CafesController):
+  
+actionpack (5.2.1) lib/abstract_controller/base.rb:129:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/cafes" for 127.0.0.1 at 2018-10-04 17:56:14 -0400
+Processing by CafesController#index as */*
+  Parameters: {"username"=>"me2", "password"=>"[FILTERED]", "cafe"=>{}}
+  [1m[36mCafe Load (0.8ms)[0m  [1m[34mSELECT  "caves".* FROM "caves" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cafes_controller.rb:5
+Completed 204 No Content in 2ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/cafes" for 127.0.0.1 at 2018-10-04 17:56:47 -0400
+Processing by CafesController#index as */*
+  Parameters: {"username"=>"me2", "password"=>"[FILTERED]", "cafe"=>{}}
+  [1m[36mCafe Load (0.3ms)[0m  [1m[34mSELECT  "caves".* FROM "caves" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cafes_controller.rb:5
+Completed 204 No Content in 1ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/cafes" for 127.0.0.1 at 2018-10-04 18:00:14 -0400
+Processing by CafesController#index as HTML
+  [1m[36mCafe Load (0.3ms)[0m  [1m[34mSELECT  "caves".* FROM "caves" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cafes_controller.rb:5
+  [1m[36mCafe Load (0.2ms)[0m  [1m[34mSELECT "caves".* FROM "caves"[0m
+  ↳ app/controllers/cafes_controller.rb:7
+Completed 200 OK in 12ms (Views: 1.0ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/cafes/1" for 127.0.0.1 at 2018-10-04 18:05:06 -0400
+Processing by CafesController#show as */*
+  Parameters: {"username"=>"me2", "password"=>"[FILTERED]", "id"=>"1", "cafe"=>{}}
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 1.7ms)
+
+
+  
+NameError (undefined local variable or method `id' for #<CafesController:0x00007ffb75198e30>):
+  
+app/controllers/cafes_controller.rb:11:in `show'
+Started GET "/cafes/" for 127.0.0.1 at 2018-10-04 18:05:11 -0400
+Processing by CafesController#index as */*
+  Parameters: {"username"=>"me2", "password"=>"[FILTERED]", "cafe"=>{}}
+  [1m[36mCafe Load (0.3ms)[0m  [1m[34mSELECT  "caves".* FROM "caves" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cafes_controller.rb:5
+  [1m[36mCafe Load (0.2ms)[0m  [1m[34mSELECT "caves".* FROM "caves"[0m
+  ↳ app/controllers/cafes_controller.rb:7
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/cafes/1" for 127.0.0.1 at 2018-10-04 18:05:28 -0400
+Processing by CafesController#show as */*
+  Parameters: {"username"=>"me2", "password"=>"[FILTERED]", "id"=>"1", "cafe"=>{}}
+  [1m[36mCafe Load (0.2ms)[0m  [1m[34mSELECT  "caves".* FROM "caves" WHERE "caves"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cafes_controller.rb:11
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/cafes/?name=Pedro's%20Corner&description=The%20coffee's%20strong%20and%20the%20baristas%20salty&address=123%20Mockingbird%20Lane" for 127.0.0.1 at 2018-10-04 18:09:50 -0400
+Processing by CafesController#create as */*
+  Parameters: {"name"=>"Pedro's Corner", "description"=>"The coffee's strong and the baristas salty", "address"=>"123 Mockingbird Lane", "cafe"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cafes_controller.rb:17
+  [1m[36mCafe Create (0.5ms)[0m  [1m[32mINSERT INTO "caves" ("name", "description", "address") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pedro's Corner"], ["description", "The coffee's strong and the baristas salty"], ["address", "123 Mockingbird Lane"]]
+  ↳ app/controllers/cafes_controller.rb:17
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cafes_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cafes_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cafes_controller.rb:19
+Completed 201 Created in 14ms (Views: 0.2ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/cafes/?name=Pedro's%20Corner&description=The%20coffee's%20strong%20and%20the%20baristas%20salty&address=123%20Mockingbird%20Lane" for 127.0.0.1 at 2018-10-04 18:10:02 -0400
+Processing by CafesController#index as */*
+  Parameters: {"name"=>"Pedro's Corner", "description"=>"The coffee's strong and the baristas salty", "address"=>"123 Mockingbird Lane", "cafe"=>{}}
+  [1m[36mCafe Load (0.3ms)[0m  [1m[34mSELECT  "caves".* FROM "caves" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cafes_controller.rb:5
+  [1m[36mCafe Load (0.3ms)[0m  [1m[34mSELECT "caves".* FROM "caves"[0m
+  ↳ app/controllers/cafes_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/cafes/4?name=Pedro's%20Corner&description=The%20coffee's%20strong%20and%20the%20baristas%20salty&address=456%20Mockingbird%20Lane" for 127.0.0.1 at 2018-10-04 18:17:35 -0400
+  
+SyntaxError (/Users/pedrohernandez/wdi/unit04/hw/rails-routes-controller-cafes/cafes/app/controllers/cafes_controller.rb:31: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/cafes_controller.rb:31: syntax error, unexpected end-of-input, expecting keyword_end
+Started PUT "/cafes/4?name=Pedro's%20Corner&description=The%20coffee's%20strong%20and%20the%20baristas%20salty&address=456%20Mockingbird%20Lane" for 127.0.0.1 at 2018-10-04 18:18:28 -0400
+Processing by CafesController#update as */*
+  Parameters: {"name"=>"Pedro's Corner", "description"=>"The coffee's strong and the baristas salty", "address"=>"456 Mockingbird Lane", "id"=>"4", "cafe"=>{}}
+  [1m[36mCafe Load (0.4ms)[0m  [1m[34mSELECT  "caves".* FROM "caves" WHERE "caves"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cafes_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cafes_controller.rb:27
+  [1m[36mCafe Update (12.1ms)[0m  [1m[33mUPDATE "caves" SET "address" = $1 WHERE "caves"."id" = $2[0m  [["address", "456 Mockingbird Lane"], ["id", 4]]
+  ↳ app/controllers/cafes_controller.rb:27
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cafes_controller.rb:27
+Completed 200 OK in 23ms (Views: 0.4ms | ActiveRecord: 19.7ms)
+
+
+Started DELETE "/cafes/4?name=Pedro's%20Corner&description=The%20coffee's%20strong%20and%20the%20baristas%20salty&address=456%20Mockingbird%20Lane" for 127.0.0.1 at 2018-10-04 18:20:25 -0400
+Processing by CafesController#destroy as */*
+  Parameters: {"name"=>"Pedro's Corner", "description"=>"The coffee's strong and the baristas salty", "address"=>"456 Mockingbird Lane", "id"=>"4", "cafe"=>{}}
+  [1m[36mCafe Load (0.3ms)[0m  [1m[34mSELECT  "caves".* FROM "caves" WHERE "caves"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cafes_controller.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cafes_controller.rb:33
+  [1m[36mCafe Destroy (0.2ms)[0m  [1m[31mDELETE FROM "caves" WHERE "caves"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/cafes_controller.rb:33
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cafes_controller.rb:33
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cafes_controller.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cafes_controller.rb:35
+  [1m[36mCafe Load (0.3ms)[0m  [1m[34mSELECT "caves".* FROM "caves"[0m
+  ↳ app/controllers/cafes_controller.rb:39
+Completed 200 OK in 15ms (Views: 1.1ms | ActiveRecord: 10.5ms)
+
+
